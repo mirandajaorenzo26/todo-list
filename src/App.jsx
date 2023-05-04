@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import NewTodoForm from './components/NewTodoForm';
-import Todolist from './components/Todolist';
+import Todolist from './components/TodoList';
+import Heading from './components/Heading';
 
 const App = () => {
   const [todos, setTodos] = useState(() => {
@@ -12,10 +12,22 @@ const App = () => {
     return JSON.parse(localValue);
   });
 
+  const [todoLeft, setTodoLeft] = useState(() => {
+    let todoLeft = 0;
+    todos.forEach((todo) => (!todo.completed ? todoLeft++ : todoLeft));
+    return todoLeft;
+  });
+
   useEffect(() => {
     localStorage.setItem('ITEMS', JSON.stringify(todos));
+    setTodoLeft(() => {
+      let todoLeft = 0;
+      todos.forEach((todo) => (!todo.completed ? todoLeft++ : todoLeft));
+      return todoLeft;
+    });
   }, [todos]);
 
+  // Helper function
   const addTodo = (title) => {
     setTodos((currentTodos) => {
       return [
@@ -42,11 +54,23 @@ const App = () => {
     });
   };
 
+  const deleteCompleted = () => {
+    setTodos((currentTodos) => {
+      return currentTodos.filter((todo) => !todo.completed);
+    });
+  };
+
   return (
-    <main>
-      <h1>Todo List by JRM</h1>
+    <main className='py-20 md:mx-10 lg:mx-[20vw] xl:mx-[30vw]'>
+      <Heading title={'TODO'} />
       <NewTodoForm addTodo={addTodo} />
-      <Todolist todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+      <Todolist
+        todos={todos}
+        toggleTodo={toggleTodo}
+        deleteTodo={deleteTodo}
+        deleteCompleted={deleteCompleted}
+        todoLeft={todoLeft}
+      />
     </main>
   );
 };

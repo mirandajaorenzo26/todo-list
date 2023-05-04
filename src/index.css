@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *,
 ::after,
 ::before {
@@ -5,6 +9,27 @@
   padding: 0;
 }
 
+html,
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  @apply px-4 text-navy-blue bg-slate-100;
+}
+
+h1 {
+  @apply text-3xl font-semibold;
+}
+
+main {
+  @apply text-center;
+}
+
+.add-task-btn {
+  @apply bg-navy-blue text-slate-100 px-3 py-2 rounded-lg;
+}
+
+.tab {
+  @apply px-2 m-2 rounded-md  border-2 border-gray-300 hover:scale-105 duration-300 cursor-pointer;
+}
+
+.tab.active {
+  @apply bg-navy-blue text-slate-200;
 }
