@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAhCAYAAABTERJSAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH1SURBVHgBzZixTsJAGMe/M30AHqGjiSbioEMZaNQFJ4wPYN9AB53BWRNwcVVfQNlwMSkDHXSAARM2+gbyBuf3pS1C6fUod1z8JR8t7fXrv9e7f74rgwJwzl3cUOxhlDHsjGZhHD5GjzHmgy5QQAmjifHD12OCcQGqYJJ6nEwHk7VE8ag32nwztIoKGfDNQvlLq4jZtBChoK2UkDZEs8QEdJ/G/AEGf0I83Dylr+gHnxAEX0uZarVj2N3ZBg2c4fTvpMVMIOUbo9EYjk7OhVk6r8/gOAegSIixj4KmW7EQDzIMrPv+kZuFek0DNsYl7VjxgQYo0sdXGUjEOc4hVLJ78grj1uKRxdugCAm5u3/MbXNzDSIxZCcu9UwVNEBPTTeTtcmhSmJc0AA9cUVtMJdpANuis5IngVOc3hopM7LCvBaj7zF0u8uzqoJCNUzrBaRiTGLJGhhw4Bksy3kTDDlwQkgDeCg6a8iBZ2KsWEwdFFF0YMInMT3QgKIDR2KoesdxM8U/8sorB0UHDlFHL5lNVFQ1QQFFB27ST1LpPUBUVyxgyIGpV15oZ764okH8lm5pwIG9RMwCKKjFzSJetnAzy5SEAcjg/2ndZOCVtQoJmRPkcb1rbWWnVxVFXy8afIXeYFAATEj1shuHDeLvM8M4fHJWWJFf13+qDe+baz4AAAAASUVORK5CYII=" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List by JRM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet" />
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (
+        localStorage.getItem('color-theme') === 'dark' ||
+        (!('color-theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      }
+    </script>
+    <script type="module" crossorigin src="/todo-list/assets/index-c71cf62e.js"></script>
+    <link rel="stylesheet" href="/todo-list/assets/index-caf97d83.css">
+  </head>
+  <body
+    class="font-roboto-mono dark:bg-navy-blue dark:text-slate-100 w-full transition-colors ease-in duration-100">
+    <div id="root" class="h-full min-w-full"></div>
+    
+  </body>
+</html>
