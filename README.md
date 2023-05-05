@@ -44,8 +44,7 @@ This is a simple todo list app built using React + Vite and Tailwind that allows
 
 ### What I learned
 
-- I've learned more about the basics of React, and it enhance my understanding of React Hooks and Components.
-- This app enhance my tailwind skills.
+- I have gained a better understanding of the fundamentals of React, which has helped me to better grasp the concepts of React Hooks and Components. Moreover, through using this app, I have also been able to improve my skills with tailwind.
 
 ## Author
 
