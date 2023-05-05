@@ -20,8 +20,8 @@ export default function NewTodoForm({ addTodo }) {
         value={newItem}
         onChange={(e) => setNewItem(e.target.value)}
       />
-      <button className='add-task-btn' onClick={handleSubmit}>
-        <AiOutlinePlus />
+      <button className='add-task-btn font-bold' onClick={handleSubmit}>
+        Add Task
       </button>
     </form>
   );

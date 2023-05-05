@@ -8,7 +8,7 @@ export default function TodoItem({
   deleteTodo,
 }) {
   return (
-    <li className='px-1 py-2 flex justify-between text-xl max-w-screen items-center'>
+    <li className='px-1 py-2 flex justify-between text-base max-w-screen items-center'>
       <label className='w-full text-left'>
         <input
           className='form-checkbox checked:bg-navy-blue h-6 w-6 rounded-full'

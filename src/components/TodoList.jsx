@@ -20,7 +20,7 @@ export default function Todolist({
   return (
     <>
       <div className='py-5'>
-        <h2>Tasks</h2>
+        <h2 className='my-2'>Tasks</h2>
         <div className='flex gap-2'>
           <div
             className={activeTab === 1 ? 'tab active flex-1' : 'tab flex-1'}

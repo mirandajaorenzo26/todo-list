@@ -8,7 +8,9 @@
   margin: 0;
   padding: 0;
 }
-
+html {
+  overflow-y: scroll;
+}
 html,
 body {
   @apply text-navy-blue bg-slate-100 w-full h-auto min-h-screen;
@@ -27,7 +29,7 @@ input {
 }
 
 .add-task-btn {
-  @apply bg-navy-blue text-slate-100 px-3 py-2 rounded-lg dark:bg-slate-200 dark:text-navy-blue;
+  @apply bg-navy-blue text-slate-100 px-3 py-2 rounded-lg dark:bg-white dark:text-navy-blue;
 }
 
 .tab {

@@ -60,7 +60,7 @@ const App = () => {
     });
   };
   return (
-    <main className='py-20 md:mx-10 lg:mx-[20vw] xl:mx-[30vw]'>
+    <main className='py-20 px-5 text-xs md:text-base md:mx-10 lg:mx-[20vw] xl:mx-[30vw]'>
       <Header title={'TODO'} />
       <NewTodoForm addTodo={addTodo} />
       <Todolist
