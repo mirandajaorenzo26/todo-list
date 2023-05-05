@@ -11,6 +11,7 @@ export default function NewTodoForm({ addTodo }) {
     addTodo(newItem);
     setNewItem('');
   };
+
   return (
     <form className='flex w-full gap-1 '>
       <input

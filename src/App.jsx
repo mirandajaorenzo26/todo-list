@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
-
 import NewTodoForm from './components/NewTodoForm';
 import Todolist from './components/TodoList';
-import Heading from './components/Heading';
+import Header from './components/Header';
 
 const App = () => {
   const [todos, setTodos] = useState(() => {
@@ -28,6 +27,7 @@ const App = () => {
   }, [todos]);
 
   // Helper function
+
   const addTodo = (title) => {
     setTodos((currentTodos) => {
       return [
@@ -59,10 +59,9 @@ const App = () => {
       return currentTodos.filter((todo) => !todo.completed);
     });
   };
-
   return (
     <main className='py-20 md:mx-10 lg:mx-[20vw] xl:mx-[30vw]'>
-      <Heading title={'TODO'} />
+      <Header title={'TODO'} />
       <NewTodoForm addTodo={addTodo} />
       <Todolist
         todos={todos}

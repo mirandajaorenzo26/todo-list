@@ -12,9 +12,24 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet" />
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (
+        localStorage.getItem('color-theme') === 'dark' ||
+        (!('color-theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      }
+    </script>
   </head>
-  <body class="font-roboto-mono">
-    <div id="root"></div>
+  <body
+    class="font-roboto-mono dark:bg-navy-blue dark:text-slate-100 w-full transition-colors ease-in duration-100">
+    <div id="root" class="h-full min-w-full"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

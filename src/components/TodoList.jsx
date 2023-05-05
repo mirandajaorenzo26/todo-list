@@ -21,7 +21,7 @@ export default function Todolist({
     <>
       <div className='py-5'>
         <h2>Tasks</h2>
-        <div className='flex justify-center'>
+        <div className='flex gap-2'>
           <div
             className={activeTab === 1 ? 'tab active flex-1' : 'tab flex-1'}
             onClick={() => handleTabClick(1)}>
