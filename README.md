@@ -7,7 +7,6 @@ This is a simple todo list app built using React + Vite and Tailwind that allows
 - [Overview](#overview)
   - [Features](#features)
   - [Screenshot](#screenshot)
-  - [Screen Record](#screenrecord)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -31,10 +30,6 @@ This is a simple todo list app built using React + Vite and Tailwind that allows
 ![Desktop Preview](/media/desktop-view-dark.png?raw=true 'Desktop Preview Dark')
 ![Mobile Preview](/media/mobile-view.png?raw=true 'Mobile Preview')
 ![Mobile Preview](/media/mobile-view-dark.png?raw=true 'Mobile Preview Dark')
-
-### Screenrecord
-
-![](/media/todo-list.mp4?raw=true 'Todo-list-Video')
 
 ### Links
 
